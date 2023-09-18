@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testCases.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testCases.BOBPLcalculator">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="axisPlCalAmortisation"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.BOBPLcalculator -->
+      <class name="testCases.BOBPageLinkStatus">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="personalBanking"/>
+          <include name="bussinessBanking"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.BOBPageLinkStatus -->
+      <class name="testCases.BOBHLcalculator">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="axisPlCalAmortisation"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.BOBHLcalculator -->
+      <class name="testCases.BOBInternationalPageLinkStatus">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="personalBanking"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.BOBInternationalPageLinkStatus -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
