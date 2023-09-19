@@ -45,7 +45,7 @@ public class BOBInternationalPageLinkStatus extends BaseClass {
 					String value1 = currentrow.getCell(0).getStringCellValue();
 					String[] sheetNam = value1.split("//");
 					String[] sheetNam2 = sheetNam[1].split("/");
-					System.out.println(sheetNam2[0]);
+					//System.out.println(sheetNam2[0]);
 
 					driver.get(value1);
 					Thread.sleep(5000);
@@ -72,8 +72,8 @@ public class BOBInternationalPageLinkStatus extends BaseClass {
 								// Thread.sleep(7000);
 								conn.connect();
 								int rescode = conn.getResponseCode();
-								System.out.println(rescode);
-								System.out.println(alinkName);
+								//System.out.println(rescode);
+								//System.out.println(alinkName);
 
 								try {
 									links.put(alinkName, rescode);
