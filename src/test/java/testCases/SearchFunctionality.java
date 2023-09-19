@@ -45,7 +45,7 @@ public class SearchFunctionality extends BaseClass{
 	        	String searchData = formatter.formatCellValue(currentrow.getCell(1));
 	        	
 	        	driver.get(urlName);
-	        	Thread.sleep(10000);
+	        	Thread.sleep(1000);
 	        	try {
 				driver.findElement(By.xpath("//div[@class='privacy-warning acceptonclose']/div[@class='close']|//a[@class='AllowAll cookie-btn']")).click();
 	        	}
