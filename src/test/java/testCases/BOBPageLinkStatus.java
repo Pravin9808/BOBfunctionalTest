@@ -61,8 +61,8 @@ public class BOBPageLinkStatus extends BaseClass  {
 									//Thread.sleep(7000);
 									conn.connect();				
 									int rescode= conn.getResponseCode();
-									System.out.println(rescode);
-									System.out.println(alinkName);
+									//System.out.println(rescode);
+									//System.out.println(alinkName);
 									
 									try {
 										links.put(alinkName, rescode);
@@ -144,8 +144,8 @@ public class BOBPageLinkStatus extends BaseClass  {
 									//Thread.sleep(7000);
 									conn.connect();				
 									int rescode= conn.getResponseCode();
-									System.out.println(rescode);
-									System.out.println(alinkName);
+									//System.out.println(rescode);
+									//System.out.println(alinkName);
 									
 									try {
 										links.put(alinkName, rescode);
