@@ -15,7 +15,7 @@ pipeline {
     }
     post {  
          always {  
-                // archiveArtifacts artifacts: '**/${WORKSPACE}/DataFiles', onlyIfSuccessful: true
+               archiveArtifacts artifacts: '**/${WORKSPACE}/DataFiles', onlyIfSuccessful: true
             
           
                 
