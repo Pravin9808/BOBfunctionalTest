@@ -15,9 +15,20 @@ pipeline {
     }
     post {  
          always {  
+                   // archiveArtifacts artifacts: 'contents.txt', onlyIfSuccessful: true
+            
+          
+                
+            //emailext attachLog: true, attachmentsPattern: 'contents.txt',
+               // body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Link: ${env.BUILD_URL}",
+               // recipientProviders: [developers(), requestor()],
+               // subject: "Jenkins Build Report  ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
              //def console_output = "${env.BUILD_URL}/console" 
-                emailext (from:'pravininteractive25@gmail.com', to: 'pravin.kumar@interactiveavenues.com',subject: "Email report from '${env.JOB_NAME}'",
-               body:readFile("test-output/emailable-report.html"), mimeType: 'text/html');
+                emailext (subject: "STARTED: jOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]' RESULT: ${currentBuild.currentResult}",
+                              attachLog: true, attachmentsPattern: "**/${WORKSPACE}/DataFiles.zip",compressLog: true,
+                              body: "Check console output at   ${env.BUILD_URL}" ,
+                                          
+                            to: "pravin.kumar@interactiveavenues.com");
                  }  
     }   
 
