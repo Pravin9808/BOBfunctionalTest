@@ -15,10 +15,8 @@ pipeline {
     }
     post {  
          always {  
-              // archiveArtifacts artifacts: 'test-output/emailable-report.html', followSymlinks: false, onlyIfSuccessful: true
-            
-          mail bcc: '', attachmentsPattern: 'test-output/emailable-report.html', body: 'Check console output at   ${env.BUILD_URL}', mimeType: 'text/html', subject: 'Jenkins Build Report  ${currentBuild.currentResult}: Job ${env.JOB_NAME}', cc: '', from: 'pravininteractive25@gmail.com', replyTo: '', to: 'pravin.kumar@interactiveavenues.com'
-                
+              // archiveArtifacts artifacts: 'test-output/emailable-report.html', followSymlinks: false, onlyIfSuccessful: true     
+                emailext attachmentsPattern: 'test-output/*', body: 'Check console output at   ${env.BUILD_URL}', mimeType: 'text/html', subject: 'Jenkins Build Report  ${currentBuild.currentResult}: Job ${env.JOB_NAME}', to: 'pravin.kumar@interactiveavenues.com'
            // emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', mimeType: 'text/html',
                //body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Link: ${env.BUILD_URL}",
                //recipientProviders: [developers(), requestor()],
