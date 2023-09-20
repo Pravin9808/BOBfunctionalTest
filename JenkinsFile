@@ -15,11 +15,11 @@ pipeline {
     }
     post {  
          always {  
-               archiveArtifacts artifacts: 'DataFiles', onlyIfSuccessful: true
+              // archiveArtifacts artifacts: 'DataFiles', onlyIfSuccessful: true
             
           
                 
-            emailext attachLog: true, attachmentsPattern: '**/${WORKSPACE}/DataFiles.zip', compressLog: true,
+            emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', mimeType: 'text/html',
                body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Link: ${env.BUILD_URL}",
                recipientProviders: [developers(), requestor()],
                subject: "Jenkins Build Report  ${currentBuild.currentResult}: Job ${env.JOB_NAME}",
