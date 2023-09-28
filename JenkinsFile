@@ -18,7 +18,7 @@ pipeline {
          always {  
                //archiveArtifacts artifacts: 'test-output/*html', followSymlinks: false
                //emailext attachmentsPattern: 'test-output\\*html', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check console output at $BUILD_URL to view the results.''', compressLog: true, mimeType: 'text/html', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'pravin.kumar@interactiveavenues.com'
-               emailext attachmentsPattern: 'DataFiles', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check console output at $BUILD_URL to view the results.''', compressLog: true, mimeType: 'text/html', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'pravininteractive25@gmail.com'
+               emailext attachmentsPattern: 'DataFiles/*', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check console output at $BUILD_URL to view the results.''', compressLog: true, mimeType: 'text/html', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'pravininteractive25@gmail.com'
 
 // emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', mimeType: 'text/html',
                //body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Link: ${env.BUILD_URL}",
