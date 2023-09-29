@@ -8,7 +8,7 @@ pipeline {
         stage('Test') {
             steps {
                 //bat "mvn -D clean test"  
-                bat "mvn -D clean verify sonar:sonar -Dsonar.token=sqa_2b48e809e77b331e1bb0c70c5c3a16ddb839d527"
+                bat "mvn -D clean verify sonar:sonar -Dsonar.token=squ_c8c33c1f5d7998b8f9580643b05c4516d3c037cc"
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'test-output/emailable-report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
 
           }
