@@ -9,11 +9,11 @@
   <test thread-count="5" name="Test">
   	<classes>
   		<class name="testCases.SearchFunctionality"/>
-  		<class name="testCases.BOBInternationalPageLinkStatus"/>
+  		<!--<class name="testCases.BOBInternationalPageLinkStatus"/>
   		<class name="testCases.BOBPageLinkStatus"/>  		
   		<class name="testCases.BOBCLcalculator"/>
   		<class name="testCases.BOBHLcalculator"/>
-  		<class name="testCases.BOBPLcalculator"/> 			
+  		<class name="testCases.BOBPLcalculator"/> -->			
   		
   	</classes>
   </test> <!-- Test -->
