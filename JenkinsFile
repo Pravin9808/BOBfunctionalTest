@@ -1,6 +1,6 @@
 pipeline { 
 agent any 
-triggers{ cron('22 16 31 1-11 *') }
+//triggers{ cron('22 16 31 1-11 *') }
 tools{ jdk "JAVA_HOME" maven "MAVEN" } 
 stages { 
 stage('Test') { 
