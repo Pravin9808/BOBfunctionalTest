@@ -13,7 +13,7 @@ publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, 
      always {  
           archiveArtifacts artifacts: 'DataFiles', followSymlinks: false
            //archiveArtifacts artifacts: 'test-output/*.html', followSymlinks: false
-           emailext attachmentsPattern: 'DataFiles\*', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check 
+           emailext attachmentsPattern: 'DataFiles', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check 
         console output at $BUILD_URL to view the results.''', compressLog: true, mimeType: 'text/html', subject: '$PROJECT_NAME - 
          Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'pravin.kumar@interactiveavenues.com'
            //emailext attachmentsPattern: 'DataFiles/*', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:Check console 
