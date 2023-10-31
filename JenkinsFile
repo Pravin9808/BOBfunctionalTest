@@ -1,7 +1,7 @@
 pipeline {
     agent any
  triggers {
-        cron('*/15 * * * *')
+       pollSCM('*/5 * * * *')
     }
     tools{
         jdk "JAVA_HOME"
