@@ -9,9 +9,7 @@ stages {
         //bat "mvn -D clean verify sonar:sonar -Dsonar.token=sqa_73a5151e0db420867465e0c8631031e964c15d85" 
          publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'test- output/emailable-report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
          }
-         
-      }  
-       post {  
+         post {  
             always {  
                   archiveArtifacts artifacts: 'DataFiles/*', followSymlinks: false
                   //archiveArtifacts artifacts: 'test-output\*.html', followSymlinks: false
@@ -20,5 +18,7 @@ stages {
            
              }  
          }
+      }  
+       
    }
 }
