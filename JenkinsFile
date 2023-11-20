@@ -16,7 +16,8 @@ stages {
             steps {
                 // Archive the folder into a zip file
                 script {
-                    zip archive: true, dir: 'DataFiles', zipFile: 'DataFiles.zip'
+                    //zip archive: true, dir: 'DataFiles', zipFile: 'DataFiles.zip'
+                     sh "zip -r DataFiles.zip DataFiles"
                 }
             }
         }
@@ -27,7 +28,7 @@ stages {
                 emailext body: 'Build successful!',
                         subject: 'Jenkins Build',
                         to: 'pravin.kumar@interactiveavenues.com',
-                        attachmentsPattern: '**/*.zip',
+                        attachmentsPattern: 'DataFiles.zip',
                         attachLog: true
             }
         }
