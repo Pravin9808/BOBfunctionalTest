@@ -16,7 +16,7 @@ stages {
             steps {
                 // Archive the folder into a zip file
                 script {
-                      zip archive: true, dir: 'DataFiles/*', zipFile: 'DataFiles.zip'
+                      zip archive: true, dir: 'DataFiles', zipFile: 'DataFiles'
                      //bat "zip -r DataFiles.zip DataFiles"
                      
                 }
