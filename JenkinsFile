@@ -28,7 +28,7 @@ stages {
             steps {
                 // Send email with the zip file as an attachment
                 emailext body: 'Build successful!',
-                        subject: 'Jenkins Build',
+                        subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
                         to: 'pravin.kumar@interactiveavenues.com',
                         attachmentsPattern: '**/*.zip',
                         attachLog: true
