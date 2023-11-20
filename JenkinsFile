@@ -42,7 +42,7 @@ stages {
                 //bat "del  '**/*.zip' "
             }
            }
-         }
+         
        
    }
 }
