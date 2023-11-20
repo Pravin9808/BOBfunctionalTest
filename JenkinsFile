@@ -33,7 +33,8 @@ stages {
                         attachmentsPattern: '**/*.zip',
                         attachLog: true
             }
-         post {
+         }
+      post {
            always {
                  // Clean up: Delete the zipped file after sending the email
                 //deleteDir()
@@ -41,8 +42,6 @@ stages {
                 //bat "del  '**/*.zip' "
             }
            }
-        }
-      
 
        
    }
